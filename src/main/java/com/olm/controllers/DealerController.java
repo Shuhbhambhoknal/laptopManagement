@@ -21,7 +21,7 @@ import com.olm.services.DealerService;
 
 @CrossOrigin("http://localhost:4200/")
 @RestController
-@RequestMapping("dealer")
+@RequestMapping("/dealer")
 public class DealerController {
 	
 	@Autowired
@@ -30,7 +30,7 @@ public class DealerController {
 
 	
 	// Adding new Department
-		@PostMapping("/add")
+		@PostMapping("/admin/add")
 		public ResponseEntity<Dealer> addDealer( @RequestBody Dealer dealer)throws InvalidEntityException{
 			Dealer add=dealerService.addDealer(dealer);
 			return new ResponseEntity<Dealer>(add , HttpStatus.CREATED);
