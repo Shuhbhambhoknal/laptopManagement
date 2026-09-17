@@ -26,9 +26,7 @@ public class DealerController {
 	
 	@Autowired
 	private DealerService dealerService;
-	
 
-	
 	// Adding new Department
 		@PostMapping("/add")
 		public ResponseEntity<Dealer> addDealer( @RequestBody Dealer dealer)throws InvalidEntityException{

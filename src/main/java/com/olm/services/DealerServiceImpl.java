@@ -18,9 +18,12 @@ public class DealerServiceImpl implements DealerService {
 		
 		@Autowired
 		private DealerRepository dealerRepository;
-		
-		
-		
+
+		@Autowired
+		public  DealerServiceImpl(DealerRepository dealerRepository){
+			this.dealerRepository=dealerRepository;
+		}
+
 		private static final Logger logger=LoggerFactory.getLogger(DealerServiceImpl.class);
 
 		@Override
